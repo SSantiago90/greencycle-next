@@ -1,19 +1,8 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
 import Layout from "@/components/Layout/Index";
 
 const inter = Inter({ subsets: ["latin"] });
-
-/* 
-  PAGES
-    - Home/Landing
-    - Login/Registro
-    * - Crear nuevo reciclcado
-    ? - Buscar productos/usuarios 
-    - Perfil/modificar datos / Historial - lista de reciclados
-    - FAQ
-*/
 
 export default function Home() {
   return (
@@ -25,7 +14,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1>Hola mundo</h1>
+        <h1>Hola Reciclaje</h1>
       </Layout>
     </>
   );
