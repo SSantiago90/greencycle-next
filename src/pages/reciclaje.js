@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Layout from "@/components/Layout/Index";
+import RecyclingForm from "@/components/RecicloForm";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -14,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1>Hola Reciclaje</h1>
+        <RecyclingForm />
       </Layout>
     </>
   );
