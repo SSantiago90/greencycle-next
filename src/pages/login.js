@@ -1,10 +1,11 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Layout from "@/components/Layout/Index";
+import RegisterForm from "@/components/RegisterForm";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function Login() {
   return (
     <>
       <Head>
@@ -14,7 +15,8 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1>Login</h1>
+        <h1>Inicia Sesión</h1>
+        <RegisterForm />
       </Layout>
     </>
   );

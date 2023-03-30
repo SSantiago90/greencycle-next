@@ -17,7 +17,7 @@ const Navbar = () => {
         <Link href="/reciclaje">Reciclaje</Link>
       </li>
       <ul>
-        <Link href="/registro">Iniciar sesión</Link>
+        <Link href="/login">Iniciar sesión</Link>
       </ul>
     </nav>
   );

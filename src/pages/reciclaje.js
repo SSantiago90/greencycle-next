@@ -5,7 +5,7 @@ import RecyclingForm from "@/components/RecicloForm";
 
 const inter = Inter({ subsets: ["latin"] });
 
-export default function Home() {
+export default function OrderCreation() {
   return (
     <>
       <Head>

@@ -27,13 +27,16 @@ function EmailForm(props) {
 
       <input
         placeholder="Contraseña"
+        type="password"
         {...register("password", { required: true })}
       />
-      {errors.email?.type === "required" && (
+      {errors.password?.type === "required" && (
         <p role="alert">Ingresa una contraseña</p>
       )}
 
-      <button type="submit">Registrarme</button>
+      <button type="submit">
+        {props.register ? "Completar datos" : "Iniciar sesión"}
+      </button>
     </form>
   );
 }
