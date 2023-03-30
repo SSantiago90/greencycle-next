@@ -17,7 +17,7 @@ export default function DataForm(props) {
         {...register("firstName", {
           required: true,
           minLength: 3,
-          maxLength: 5,
+          maxLength: 60,
         })}
       />
       {errors.firstName?.type === "required" && (
@@ -33,7 +33,7 @@ export default function DataForm(props) {
       <br />
       <input
         placeholder="Apellido"
-        {...register("lastName", { required: true, maxLength: 5 })}
+        {...register("lastName", { required: true, maxLength: 60 })}
       />
       {errors.lastName?.type === "required" && (
         <p role="alert">First name is required</p>

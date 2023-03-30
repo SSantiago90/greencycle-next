@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-
 function RecyclingForm() {
   const [materials, setMaterials] = useState([]);
   const [weight, setWeight] = useState("");

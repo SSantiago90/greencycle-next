@@ -25,7 +25,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1>Hola mundo</h1>
+        <h1>Bienvenido a Greencycle</h1>
       </Layout>
     </>
   );
