@@ -1,10 +1,25 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Layout from "@/components/Layout/Index";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Login() {
+  let ids = [1, 2, 5];
+
+  let endpoints = ids.map((id) => `/api/orders/${id}`);
+  let promises = endpoints.map((endpoint) => fetch(endpoint));
+
+  Promise.all(promises)
+    .then((responses) => Promise.all(responses.map((res) => res.json())))
+    .then((data) => {
+      console.log(data);
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+
   return (
     <>
       <Head>

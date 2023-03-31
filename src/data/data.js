@@ -2,7 +2,7 @@ export const data = {
   users: [
     {
       id: 1,
-      email: "salkin.santiago@gmail.com",
+      email: "juan@mail.com",
       password: "123",
       firstName: "Juan",
       lastName: "Perez",
@@ -1600,6 +1600,7 @@ export const data = {
       id: 1,
       date: 1648060800000,
       state: "complete",
+      location: "Calle falsa 1234",
       content: {
         vidrio: 3,
         carton: 2,
@@ -1607,6 +1608,7 @@ export const data = {
         ewaste: 1,
       },
       takenBy: 2,
+      createdBy: 1,
     },
     {
       id: 2,
