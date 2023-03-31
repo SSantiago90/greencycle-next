@@ -6,17 +6,18 @@ export default function handler(req, res) {
     const { email: emailReq, password: passwordReq } = JSON.parse(req.body);
 
     const userRequested = data.users.find((user) => {
-      console.log(emailReq, passwordReq, user.email);
       return user.email === emailReq;
     });
-    console.log(userRequested);
 
-    if (!userRequested) {
+    const passwordMatch = userRequested.password === passwordReq;
+
+    if (userRequested && passwordMatch) {
+      res.status(200).json({ auth: true });
+    } else {
       res.status(200).json({
         message: "Usuario o contraseñas no válidos.",
+        auth: false,
       });
-    } else {
-      res.status(200).json({ auth: true });
     }
   } else
     res.status(405).json({

@@ -2,11 +2,14 @@ import Link from "next/link";
 import { useState } from "react";
 import DataForm from "./DataForm";
 import EmailForm from "./EmailForm";
+import { useRouter } from "next/router";
 
 export default function RegisterForm(props) {
   const [formEmail, setFormEmail] = useState(false);
   const [registerComplete, setRegisterComplete] = useState(false);
+  const [errors, setErrors] = useState();
 
+  const navigate = useRouter();
   function handleSubmitEmail() {
     setFormEmail(true);
   }
@@ -21,14 +24,17 @@ export default function RegisterForm(props) {
   async function handleLogin(data) {
     const JSONdata = JSON.stringify(data);
 
-    console.log("body->", data);
     let response = await fetch("/api/users/login", {
       method: "POST",
       body: JSONdata,
     });
-    console.log("response1", response);
+
     let jsonData = await response.json();
-    console.log(jsonData);
+    if (jsonData.auth) {
+      navigate.push("/dashboard");
+    } else {
+      setErrors(jsonData.message);
+    }
   }
 
   if (registerComplete) {
@@ -54,9 +60,19 @@ export default function RegisterForm(props) {
       )}
       <div>
         {!props.register && (
-          <small>
-            ¿Aún no tienes cuenta? <Link href="/registro">Registrate aquí</Link>
-          </small>
+          <div>
+            <small>
+              ¿Aún no tienes cuenta?{" "}
+              <Link href="/registro">Registrate aquí</Link>
+            </small>
+          </div>
+        )}
+        {errors && (
+          <div>
+            <small style={{ color: "darksalmon" }}>
+              Error al iniciar sesión: {errors}
+            </small>
+          </div>
         )}
       </div>
     </div>
