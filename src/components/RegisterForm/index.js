@@ -62,7 +62,7 @@ export default function RegisterForm(props) {
         {!props.register && (
           <div>
             <small>
-              ¿Aún no tienes cuenta?{" "}
+              ¿Aún no tienes cuenta?
               <Link href="/registro">Registrate aquí</Link>
             </small>
           </div>

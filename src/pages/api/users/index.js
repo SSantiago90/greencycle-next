@@ -1,6 +1,5 @@
-import { users } from "@/data/data";
+import { data } from "@/data/data";
 
 export default function handler(req, res) {
-  const jsonUsers = JSON.stringify(users);
-  res.status(405).json(users);
+  res.status(200).json(data.users);
 }
