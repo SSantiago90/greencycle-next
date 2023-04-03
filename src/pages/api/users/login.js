@@ -9,7 +9,7 @@ export default function handler(req, res) {
       return user.email === emailReq;
     });
 
-    const passwordMatch = userRequested.password === passwordReq;
+    const passwordMatch = userRequested?.password === passwordReq;
 
     if (userRequested && passwordMatch) {
       res.status(200).json({ auth: true });
@@ -21,6 +21,6 @@ export default function handler(req, res) {
     }
   } else
     res.status(405).json({
-      message: "Invalid request method GET",
+      message: `Invalid request method. Expected POST, recieved ${req.method}`,
     });
 }

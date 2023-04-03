@@ -1,7 +1,8 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import Layout from "@/components/Layout/Index";
+import Layout from "@/components/Layout";
 import { useEffect } from "react";
+import Link from "next/link";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -33,6 +34,9 @@ export default function Login() {
         <ul>
           <li>Mis Datos</li>
           <li>Mis órdenes</li>
+          <Link href="/createOrder">
+            <button>Crear Orden</button>
+          </Link>
         </ul>
       </Layout>
     </>

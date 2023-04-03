@@ -29,7 +29,6 @@ function RecyclingForm() {
         <label htmlFor="materials">Material a reciclar:</label>
         <select
           id="materials"
-          multiple={true}
           value={materials}
           onChange={handleMaterialChange}
         >
@@ -76,6 +75,11 @@ function RecyclingForm() {
           <option value="mediano">Mediano (3 a 10 cajas)</option>
           <option value="grande">Grande (10 cajas o más)</option>
         </select>
+      </div>
+      <div>
+        <label for="img">Sube una imágen de muestra.</label>
+        <input type="file" id="img" name="img" accept="image/*" />
+        <small>Tamaño máximo del archivo: 2 MB</small>
       </div>
       <div>
         <label htmlFor="observations">Observaciones:</label>
