@@ -18,7 +18,7 @@ export default function Register() {
       </Head>
       <Layout>
         <h1>Crear orden</h1>
-        <RecyclingForm />
+        <OrderForm />
       </Layout>
     </>
   );
