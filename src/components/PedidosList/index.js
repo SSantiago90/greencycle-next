@@ -1,0 +1,18 @@
+import { data } from "@/data/data";
+import Pedido from "@/components/PedidosCard/Index";
+import { useState, useEffect } from "react";
+export default function PedidosList(prop) {
+  const [pedidos, setPedidos] = useState([]);
+  const orders = data.orders;
+  useEffect(() => {
+    const result = orders.filter((o) => o.state === prop.state);
+    setPedidos(result);
+  }, []);
+  return (
+    <section>
+      {pedidos.map((p) => {
+        return <Pedido prop={p} />;
+      })}
+    </section>
+  );
+}
