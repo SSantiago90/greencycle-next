@@ -10,10 +10,12 @@ export default function Detalles() {
   const router = useRouter();
   const id = router.query;
   const orders = data.orders;
+
   useEffect(() => {
     const result = orders.find((o) => o.id == id.id);
     setDetalle(result);
   }, []);
+
   return (
     <>
       <Head>

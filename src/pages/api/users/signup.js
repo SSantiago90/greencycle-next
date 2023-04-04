@@ -6,6 +6,6 @@ export default function handler(req, res) {
     });
   } else
     res.status(405).json({
-      message: "Invalid request method GET",
+      message: `Invalid request method. Expected POST, recieved ${req.method}`,
     });
 }

@@ -214,8 +214,8 @@ kbd {
   --h6-color: #4d606d;
   --muted-color: hsl(205deg, 10%, 50%);
   --muted-border-color: hsl(205deg, 20%, 94%);
-  --primary: hsl(195deg, 85%, 41%);
-  --primary-hover: hsl(195deg, 90%, 32%);
+  --primary: hsl(133, 54%, 46%);
+  --primary-hover: hsl(133, 54%, 46%);
   --primary-focus: rgba(16, 149, 193, 0.125);
   --primary-inverse: #fff;
   --secondary: hsl(205deg, 15%, 41%);
@@ -228,7 +228,7 @@ kbd {
   --contrast-inverse: #fff;
   --mark-background-color: #fff2ca;
   --mark-color: #543a26;
-  --ins-color: #388e3c;
+  --ins-color: #51be57;
   --del-color: #c62828;
   --blockquote-border-color: var(--muted-border-color);
   --blockquote-footer-color: var(--muted-color);
@@ -308,7 +308,7 @@ kbd {
   color-scheme: light;
 }
 
-@media only screen and (prefers-color-scheme: dark) {
+@media only screen and (prefers-color-scheme: light) {
   :root:not([data-theme]) {
     --background-color: #11191f;
     --color: hsl(205deg, 16%, 77%);
@@ -320,8 +320,8 @@ kbd {
     --h6-color: #afbbc4;
     --muted-color: hsl(205deg, 10%, 50%);
     --muted-border-color: #1f2d38;
-    --primary: hsl(195deg, 85%, 41%);
-    --primary-hover: hsl(195deg, 80%, 50%);
+    --primary: hsl(133, 54%, 46%);
+    --primary-hover: hsl(133, 54%, 46%);
     --primary-focus: rgba(16, 149, 193, 0.25);
     --primary-inverse: #fff;
     --secondary: hsl(205deg, 15%, 41%);
@@ -2655,18 +2655,6 @@ textarea,
     transition-delay: 0s !important;
     transition-duration: 0s !important;
   }
-}
-
-/* Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
 }
 
 /*# sourceMappingURL=pico.css.map */
