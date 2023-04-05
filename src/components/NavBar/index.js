@@ -14,7 +14,7 @@ const Navbar = () => {
         </li>
       </ul>
       <li>
-        <Link href="/reciclaje">Reciclaje</Link>
+        <Link href="/createOrder">Reciclaje</Link>
       </li>
       <ul>
         <Link href="/login">Iniciar sesión</Link>

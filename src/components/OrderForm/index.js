@@ -1,3 +1,7 @@
+import { useForm } from "react-hook-form";
+import recycleSVG from "../../assets/svg/recycle.svg";
+import Image from "next/image";
+
 import React, { useState } from "react";
 function RecyclingForm() {
   const [materials, setMaterials] = useState([]);
@@ -23,45 +27,48 @@ function RecyclingForm() {
     });
   };
 
+  function CheckboxInput() {}
+
+  function SelectInput({ onChange }) {
+    return (
+      <select id="materials" onChange={handleMaterialChange}>
+        <option type="checkbox" value="vidrio">
+          Vidrio
+        </option>
+        <option type="checkbox" value="madera">
+          Madera
+        </option>
+        <option type="checkbox" value="papel">
+          Papel
+        </option>
+        <option type="checkbox" value="ewaste">
+          E-waste
+        </option>
+        <option type="checkbox" value="carton">
+          Cartón
+        </option>
+      </select>
+    );
+  }
+
   return (
     <form onSubmit={handleSubmit}>
       <div>
+        <Image
+          height="620"
+          style={{
+            display: "block",
+            margin: "-165px auto 0",
+            zIndex: -1,
+          }}
+          src={recycleSVG}
+          alt="svg"
+        />
         <label htmlFor="materials">Material a reciclar:</label>
-        <select
-          id="materials"
-          value={materials}
-          onChange={handleMaterialChange}
-        >
-          <option type="checkbox" value="vidrio">
-            Vidrio
-          </option>
-          <option type="checkbox" value="madera">
-            Madera
-          </option>
-          <option type="checkbox" value="papel">
-            Papel
-          </option>
-          <option type="checkbox" value="ewaste">
-            E-waste
-          </option>
-          <option type="checkbox" value="carton">
-            Cartón
-          </option>
-        </select>
+        <SelectInput onChange={handleMaterialChange} />
       </div>
       <div>
         <label htmlFor="weight">Peso aproximado:</label>
-        <select
-          id="weight"
-          value={weight}
-          onChange={(e) => setWeight(e.target.value)}
-        >
-          <option value="">Selecciona un rango de peso</option>
-          <option value="menos de 3kg">Menos de 3kg</option>
-          <option value="3kg a 10kg">3kg a 10kg</option>
-          <option value="10kg a 20kg">10kg a 20kg</option>
-          <option value="más de 20kg">Más de 20kg</option>
-        </select>
       </div>
       <div>
         <label htmlFor="volume">Volumen:</label>

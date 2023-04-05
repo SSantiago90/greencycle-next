@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
-import Layout from "@/components/Layout/Index";
+import Layout from "@/components/Layout";
+import PedidosList from "@/components/PedidosList/index";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,6 +26,7 @@ export default function Home() {
       </Head>
       <Layout>
         <h1>Bienvenido a Greencycle</h1>
+        <PedidosList state={"pending"} />
       </Layout>
     </>
   );

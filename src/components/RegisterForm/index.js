@@ -15,7 +15,7 @@ export default function RegisterForm(props) {
   }
 
   async function handleSubmitData() {
-    let response = await fetch("/api/users/register");
+    let response = await fetch("/api/users/signup");
     let jsonData = await response.json();
     console.log(jsonData);
     setRegisterComplete(jsonData);
