@@ -1,0 +1,26 @@
+@media (min-width: 1020px) {
+  .header{
+    height: 420px;
+    display: flex;
+    margin-bottom: 100px;
+  }
+  
+  .header_body{
+    margin-top: 80px;
+  }
+  
+  .header_img{
+    margin-top: 80px;
+    padding: 15px;
+  }
+  
+  .header_img:before{
+    content: "";
+    background-color: #89bb775e;
+    border-radius: 100%;
+    padding: 200px;
+    position: absolute;
+    z-index: -3;    
+    margin-top: -35px;
+  }
+}

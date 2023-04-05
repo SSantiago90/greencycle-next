@@ -14,7 +14,7 @@ export default function Register() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Layout>
+      <Layout bg="primary">
         <h1>Registrate</h1>
         <RegisterForm register />
       </Layout>

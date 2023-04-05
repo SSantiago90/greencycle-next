@@ -1,4 +1,5 @@
 import { useForm } from "react-hook-form";
+import Button from "../Button";
 
 export default function DataForm(props) {
   const {
@@ -21,13 +22,19 @@ export default function DataForm(props) {
         })}
       />
       {errors.firstName?.type === "required" && (
-        <p role="alert">First name is required</p>
+        <p role="alert" className="alert text-error">
+          First name is required
+        </p>
       )}
       {errors.firstName?.type === "maxLength" && (
-        <p role="alert">Máximo de caracteres alcanzado</p>
+        <p role="alert" className="alert text-error">
+          Máximo de caracteres alcanzado
+        </p>
       )}
       {errors.firstName?.type === "minLength" && (
-        <p role="alert">Ingresá tu nombre completo</p>
+        <p role="alert" className="alert text-error">
+          Ingresá tu nombre completo
+        </p>
       )}
 
       <br />
@@ -36,15 +43,21 @@ export default function DataForm(props) {
         {...register("lastName", { required: true, maxLength: 60 })}
       />
       {errors.lastName?.type === "required" && (
-        <p role="alert">First name is required</p>
+        <p role="alert" className="alert text-error">
+          First name is required
+        </p>
       )}
       {errors.lastName?.type === "maxLength" && (
-        <p role="alert">Máximo de caracteres alcanzado</p>
+        <p role="alert" className="alert text-error">
+          Máximo de caracteres alcanzado
+        </p>
       )}
 
       <input placeholder="Ciudad" {...register("city", { required: true })} />
       {errors.city?.type === "required" && (
-        <p role="alert">First name is required</p>
+        <p role="alert" className="alert text-error">
+          First name is required
+        </p>
       )}
 
       <input
@@ -52,7 +65,9 @@ export default function DataForm(props) {
         {...register("address", { required: true })}
       />
       {errors.address?.type === "required" && (
-        <p role="alert">First name is required</p>
+        <p role="alert" className="alert text-error">
+          First name is required
+        </p>
       )}
 
       <input
@@ -61,12 +76,20 @@ export default function DataForm(props) {
         {...register("phone", { required: true, maxLength: 15 })}
       />
       {errors.phone?.type === "required" && (
-        <p role="alert">First name is required</p>
+        <p role="alert" className="alert text-error">
+          First name is required
+        </p>
       )}
       {errors.phone?.type === "maxLength" && (
-        <p role="alert">Máximo de caracteres alcanzado</p>
+        <p role="alert" className="alert text-error">
+          Máximo de caracteres alcanzado
+        </p>
       )}
-
+      <div>
+        <Button onClick={props.handleSubmit} size="xs" type={"borderless"}>
+          Quiero completar mis datos en otro momento
+        </Button>
+      </div>
       <button type="submit">Registrarme</button>
     </form>
   );

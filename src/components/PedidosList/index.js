@@ -14,7 +14,7 @@ export default function PedidosList(prop) {
   return (
     <section>
       {pedidos.map((p) => {
-        return <Pedido prop={p} />;
+        return <Pedido key={p.id} prop={p} />;
       })}
     </section>
   );

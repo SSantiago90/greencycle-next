@@ -2,6 +2,8 @@ import Head from "next/head";
 import { Inter } from "next/font/google";
 import Layout from "@/components/Layout";
 import PedidosList from "@/components/PedidosList/index";
+import Header from "@/components/Header";
+import Notification from "@/components/Notification";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -25,8 +27,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout>
-        <h1>Bienvenido a Greencycle</h1>
-        <PedidosList state={"pending"} />
+        <Header />
+        <Notification color="primary" fluid={true}>
+          En los países desarrollados una persona produce, como media, 1
+          kilogramo de basura por día. En los países en vías de desarrollo se
+          produce entre 400 y 700 gramos por habitante al día.
+        </Notification>
+        {/* <PedidosList state={"pending"} /> */}
       </Layout>
     </>
   );

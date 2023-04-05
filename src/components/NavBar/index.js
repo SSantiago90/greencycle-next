@@ -2,11 +2,15 @@ import Link from "next/link";
 
 const Navbar = () => {
   return (
-    <nav role="navigation" aria-label="main navigation">
-      <ul>
-        <Link href="/">
-          <img src="/logo.png" alt="Logo" />
-        </Link>
+    <nav
+      style={{ backgroundColor: "white" }}
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <ul className="text-primary">
+        <strong>
+          <Link href="/">GreenCylce</Link>
+        </strong>
       </ul>
       <ul>
         <li>

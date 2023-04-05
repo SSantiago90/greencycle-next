@@ -1,0 +1,17 @@
+.xs{
+  font-size: smaller;
+  padding: 4px;
+}
+.small{
+  max-width: 220px;
+}
+
+.md{
+  max-width: 320px;
+}
+
+.borderless{
+  border: none;
+  background-color: white;
+  color: var(--primary);
+}

@@ -1,6 +1,6 @@
 import { useForm } from "react-hook-form";
-import recycleSVG from "../../assets/svg/recycle.svg";
 import Image from "next/image";
+import recycleSVG from "../../assets/svg/recycle.svg";
 
 import React, { useState } from "react";
 function RecyclingForm() {
@@ -26,8 +26,6 @@ function RecyclingForm() {
       observations,
     });
   };
-
-  function CheckboxInput() {}
 
   function SelectInput({ onChange }) {
     return (

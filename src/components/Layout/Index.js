@@ -1,10 +1,12 @@
 import NavBar from "@/components/Navbar";
+import classNames from "classnames";
 
-export default function Layout({ children }) {
+export default function Layout({ children, bg }) {
+  const classNamesMain = classNames(bg);
   return (
-    <main className="container">
+    <main className={bg}>
       <NavBar />
-      <section>{children}</section>
+      <section className="container">{children}</section>
     </main>
   );
 }

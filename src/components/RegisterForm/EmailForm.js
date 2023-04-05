@@ -25,6 +25,18 @@ function EmailForm(props) {
         <p role="alert">Introduzca un email válido</p>
       )}
 
+      {props.register && (
+        <>
+          <input
+            placeholder="Nombre de usuario"
+            type="text"
+            {...register("username", { required: true })}
+          />
+          {errors.passwordRetype?.type === "required" && (
+            <p role="alert">Ingresa un nombre de usuario</p>
+          )}
+        </>
+      )}
       <input
         placeholder="Contraseña"
         type="password"
@@ -32,6 +44,19 @@ function EmailForm(props) {
       />
       {errors.password?.type === "required" && (
         <p role="alert">Ingresa una contraseña</p>
+      )}
+
+      {props.register && (
+        <>
+          <input
+            placeholder="Repite tu contraseña"
+            type="password"
+            {...register("passwordRetype", { required: true })}
+          />
+          {errors.passwordRetype?.type === "required" && (
+            <p role="alert">Ingresa una contraseña</p>
+          )}
+        </>
       )}
 
       <button type="submit">

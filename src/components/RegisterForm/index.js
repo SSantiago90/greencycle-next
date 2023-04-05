@@ -69,7 +69,7 @@ export default function RegisterForm(props) {
         )}
         {errors && (
           <div>
-            <small style={{ color: "darksalmon" }}>
+            <small className="text-error">
               Error al iniciar sesión: {errors}
             </small>
           </div>
