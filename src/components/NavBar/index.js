@@ -19,6 +19,9 @@ const Navbar = () => {
       <ul>
         <Link href="/login">Iniciar sesión</Link>
       </ul>
+      <ul>
+        <Link href="/perfil">Perfil</Link>
+      </ul>
     </nav>
   );
 };
