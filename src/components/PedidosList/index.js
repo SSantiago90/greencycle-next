@@ -12,7 +12,7 @@ export default function PedidosList(prop) {
   }, []);
 
   return (
-    <section>
+    <section className="pedidos_container">
       {pedidos.map((p) => {
         return <Pedido key={p.id} prop={p} />;
       })}

@@ -1,18 +1,246 @@
 @import url("globals.css");
 
-.text-primary{
-  color: var(--primary)
-}
-
-.alert{
+.alert {
   font-size: small;
 }
 
-.text-error{
+.text-error {
   color: darksalmon;
 }
 
-.container.primary{
-  background: rgb(137,187,119);
-  background: linear-gradient(180deg, rgba(137,187,119,1) 0%, rgba(137,187,119,0.6530813008797269) 29%, rgba(255,255,255,0) 100%);
+.container.primary {
+  background: rgb(137, 187, 119);
+  background: linear-gradient(
+    180deg,
+    rgba(137, 187, 119, 1) 0%,
+    rgba(137, 187, 119, 0.6530813008797269) 29%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+/* NavBar */
+
+.nav_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  /* padding: 0px 60px; */
+}
+.logo {
+  color: var(--primary);
+}
+.nav_container ul li {
+  margin: 0px 5px;
+  font-size: 0.8rem;
+}
+.link_login a {
+  background-color: var(--primary);
+  color: white;
+  padding: 8px 16px;
+}
+/* Pedidos */
+
+.pedidos_container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.pedidos_item {
+  width: clamp(250px, 40%, 300px);
+  height: 70px;
+  background-color: #89bb77;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.pedidos_item_data {
+  display: flex;
+  height: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 10px;
+  text-align: center;
+  padding: 10px;
+}
+.pedidos_item_data p {
+  margin: 0px;
+  font-size: 0.9rem;
+  position: relative;
+}
+.p_size::before {
+  content: "Tamaño";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  font-size: 0.6rem;
+}
+.p_cantidad::before {
+  content: "Cantidad";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: -20px;
+  font-size: 0.6rem;
+}
+.pedido_icon {
+  background-color: white;
+}
+
+/* Login */
+
+.form_container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.form_banner {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 30.5rem;
+  background: rgb(232, 230, 218);
+  background: linear-gradient(
+    180deg,
+    rgba(232, 230, 218, 1) 80%,
+    rgba(244, 242, 236, 1) 100%
+  );
+}
+.form_banner img {
+  width: 100%;
+  height: auto;
+  padding: 40px;
+}
+.form_div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30.5rem;
+  width: 60%;
+  padding: 80px;
+  background-color: var(--primary);
+}
+.form_saludo,
+.cta_div {
+  text-align: center;
+  color: #e9e6da;
+}
+.cta_div a {
+  color: #89bb77;
+}
+.form_div input {
+  max-width: 22rem;
+  margin: auto;
+  font-size: 0.8rem;
+  height: 50px;
+}
+.form_div form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.form_button {
+  background-color: #f4f2ec;
+  color: var(--primary);
+}
+.form_button:hover {
+  background-color: var(--primary-hover);
+  color: #f4f2ec;
+}
+
+/* Home */
+
+.text-span {
+  color: #89bb77;
+}
+.home_description {
+  width: 80%;
+  margin: auto;
+}
+.home_description h3 {
+  text-align: start;
+  font-size: 2.5rem;
+}
+.home_description h4 {
+  text-align: end;
+  font-size: 1.5rem;
+}
+.reciclaje_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 50px 0px;
+}
+.border_div {
+  position: relative;
+  background: linear-gradient(to right, #678a00, #e9e6da);
+  width: 460px;
+  height: 460px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+.img_bg {
+  width: 450px;
+  height: 450px;
+
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+  overflow: hidden;
+}
+.reciclaje_img {
+  width: 450px;
+  object-fit: contain;
+  padding: 25px;
+  background-color: var(--background-color);
+}
+
+.content_div {
+  width: 450px;
+  padding: 15px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.reciclaje_section .reciclaje_title {
+  font-size: 1.2rem;
+  text-align: start;
+  margin: 0px;
+}
+
+.reciclaje_section p,
+.reciclaje_section ul {
+  font-size: 0.8rem;
+  margin: 10px 0px;
+}
+.underline {
+  height: 0.15rem;
+  width: 10.7rem;
+  background: #2c3d49;
+  margin-top: 10px;
+}
+
+.home_description > .reciclaje_section:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.home_description > .reciclaje_section:nth-child(odd) > .border_div {
+  background: linear-gradient(to left, #678a00, #e9e6da);
 }

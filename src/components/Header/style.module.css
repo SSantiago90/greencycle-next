@@ -1,26 +1,36 @@
 @media (min-width: 1020px) {
-  .header{
+  .header {
     height: 420px;
     display: flex;
-    margin-bottom: 100px;
+    margin: 0px auto 100px;
+    width: 80%;
+    gap: 40px;
   }
-  
-  .header_body{
+
+  .header_body {
     margin-top: 80px;
   }
-  
-  .header_img{
+
+  .header_img {
     margin-top: 80px;
     padding: 15px;
+    position: relative;
   }
-  
-  .header_img:before{
+
+  .header_img:before {
     content: "";
-    background-color: #89bb775e;
+    background: rgb(41, 73, 55);
+    background: linear-gradient(
+      180deg,
+      rgba(41, 73, 55, 1) 0%,
+      rgba(155, 167, 153, 1) 100%
+    );
     border-radius: 100%;
-    padding: 200px;
+    padding: 190px;
     position: absolute;
-    z-index: -3;    
-    margin-top: -35px;
+    z-index: -3;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -20px;
   }
 }

@@ -3,16 +3,17 @@ import Link from "next/link";
 const Navbar = () => {
   return (
     <nav
-      style={{ backgroundColor: "white" }}
+      style={{ backgroundColor: "#F4F2EC" }}
       role="navigation"
       aria-label="main navigation"
+      className="nav_container"
     >
-      <ul className="text-primary">
+      <div className="logo">
         <strong>
-          <Link href="/">GreenCylce</Link>
+          <Link href="/">GreenCycle</Link>
         </strong>
-      </ul>
-      <ul>
+      </div>
+      {/* <ul>
         <li>
           <Link href="/">Inicio</Link>
         </li>
@@ -25,6 +26,20 @@ const Navbar = () => {
       </ul>
       <ul>
         <Link href="/perfil">Perfil</Link>
+      </ul> */}
+      <ul>
+        <li>
+          <Link href="/nosotros">Sobre Nosotros</Link>
+        </li>
+        <li>
+          <Link href="/noticias">Noticias</Link>
+        </li>
+        <li>
+          <Link href="/preguntasfrecuentes">Preguntas Frecuentes</Link>
+        </li>
+        <li className="link_login">
+          <Link href="/login">Login</Link>
+        </li>
       </ul>
     </nav>
   );
