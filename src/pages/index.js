@@ -11,6 +11,10 @@ import carton from "../static/images/reciclaje_carton.png";
 import lata from "../static/images/reciclaje_lata.png";
 import madera from "../static/images/reciclaje_madera.png";
 import otros from "../static/images/reciclaje_otros.png";
+import coordinadores from "../static/images/coordinar.png";
+import { FaWifi, FaBusinessTime } from "react-icons/fa";
+import { MdAddHomeWork } from "react-icons/md";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -180,6 +184,50 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="coordinadores_banner">
+          <Image
+            src={coordinadores}
+            alt="coordinadores"
+            className="coordinadores_img"
+          />
+          <h2>COORDINADORES DEL RECICLAJE DOMESTICO</h2>
+        </div>
+        <div className="home_card_container">
+          <h2>Reducir, Reciclar, Reutilizar</h2>
+          <div className="home_cards">
+            <article>
+              <div className="logo_card">
+                <FaWifi className="icon_card" />
+              </div>
+              <h5>Desde donde estes</h5>
+              <p>
+                independientemente de donde te encuentres podras coordinar un
+                retiro o entrega de materiales reciclables
+              </p>
+            </article>
+            <article>
+              <div className="logo_card">
+                <FaBusinessTime className="icon_card bussiness_logo" />
+              </div>
+              <h5>Coordina dia y horario</h5>
+              <p>
+                Coordina dia y horario para retirar aquello que no se usa mas y
+                darle una segunda oportunidad
+              </p>
+            </article>
+            <article>
+              <div className="logo_card">
+                <MdAddHomeWork className="icon_card" />
+              </div>
+              <h5>Retira en la puerta</h5>
+              <p>
+                Retiralo en puerta de personas recicladoras y comprometidas con
+                el medio ambiente
+              </p>
+            </article>
+          </div>
+        </div>
+        <Footer />
         {/* <PedidosList state={"pending"} /> */}
       </Layout>
     </>
