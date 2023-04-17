@@ -77,6 +77,11 @@ export const data = {
       hair: { color: "Blond", type: "Curly" },
       domain: "51.la",
       ip: "253.240.20.181",
+      orderQuantity: {
+        vidrio: 75,
+        carton: 10,
+        pilas: 3,
+      },
       address: {
         address: "6007 Applegate Lane",
         city: "Louisville",

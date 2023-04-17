@@ -1,6 +1,7 @@
 import Head from "next/head";
 import { Inter } from "next/font/google";
 import Layout from "@/components/Layout/Index";
+import Chart from "@/components/Chart";
 import RegisterForm from "@/components/RegisterForm";
 import { useState, useEffect } from "react";
 import Image from "next/image";
@@ -50,6 +51,8 @@ export default function Perfil() {
       </Head>
       <Layout>
         <h1>Perfil: {extractedData.role}</h1>
+        <Chart />
+
         <div style={{ display: "flex" }}>
           <Image
             src={
