@@ -49,7 +49,7 @@ export default function RegisterForm(props) {
   }
 
   return (
-    <div>
+    <div style={{ minHeight: "100%" }}>
       {!formEmail ? (
         <EmailForm
           onSubmit={props.register ? handleSubmitEmail : handleLogin}
@@ -59,14 +59,14 @@ export default function RegisterForm(props) {
         <DataForm onSubmit={handleSubmitData} />
       )}
       <div>
-        {!props.register && (
+        {/* {!props.register && (
           <div>
             <small>
               ¿Aún no tienes cuenta?
               <Link href="/registro">Registrate aquí</Link>
             </small>
           </div>
-        )}
+        )} */}
         {errors && (
           <div>
             <small className="text-error">

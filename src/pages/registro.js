@@ -15,7 +15,6 @@ export default function Register() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Layout bg="primary">
-        <h1>Registrate</h1>
         <RegisterForm register />
       </Layout>
     </>

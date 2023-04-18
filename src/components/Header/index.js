@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import recycleSVG from "../../assets/svg/recycling-home.svg";
+import recicle from "../../static/images/reciclaje_banner.png";
 import styles from "./style.module.css";
 import Button from "../Button";
 import Link from "next/link";
@@ -10,7 +10,7 @@ function Header() {
     <div className={styles.header}>
       <div className={styles.header_body}>
         <h2>
-          ¿Qué es <span className="text-primary">GreenCycle?</span>
+          ¿Qué es <span className="text-span">GreenCycle?</span>
         </h2>
         <p>
           Green Cycle es una aplicación que conecta a usuarios que buscan ayudar
@@ -20,9 +20,9 @@ function Header() {
           reciclaje. Green Cycle nace bajo la consigna Reducir, Reutilizar,
           Reciclar
         </p>
-        <Link href="/registro">
+        {/* <Link href="/registro">
           <Button size="small">Empezar a reciclar</Button>
-        </Link>
+        </Link> */}
       </div>
       <div className={styles.header_img}>
         <Image
@@ -31,7 +31,7 @@ function Header() {
             display: "block",
             zIndex: -1,
           }}
-          src={recycleSVG}
+          src={recicle}
           alt="svg"
         />
       </div>

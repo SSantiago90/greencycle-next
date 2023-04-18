@@ -1,17 +1,16 @@
-.notification{
+.notification {
   font-weight: 600;
-  border-radius: 5px;
-  padding: 18px 12px;  
+  padding: 18px 12px;
   margin: 20px auto;
-  color: white;  
+  color: white;
   text-align: center;
 }
 
-.primary{
+.primary {
   background-color: var(--primary);
 }
 
-.fluid{
+.fluid {
   position: relative;
   display: block;
   width: 100vw;
