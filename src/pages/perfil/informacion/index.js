@@ -7,7 +7,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import AlertButton from "@/components/AlertButton";
 import Link from "next/link";
-import profileImageMan from "../static/images/profileImageMan.png";
+import profileImageMan from "../../../static/images/profileImageMan.png";
 
 const inter = Inter({ subsets: ["latin"] });
 

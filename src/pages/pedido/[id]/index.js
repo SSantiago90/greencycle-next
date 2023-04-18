@@ -5,11 +5,17 @@ import { useRouter } from "next/router";
 import { data } from "@/data/data";
 import { useState, useEffect } from "react";
 
+
+
+// HISTORIAL DE TODOS LOS PEDIDOS 
+
 export default function Detalles() {
   const [detalle, setDetalle] = useState();
   const router = useRouter();
   const id = router.query;
   const orders = data.orders;
+
+  
 
   useEffect(() => {
     const result = orders.find((o) => o.id == id.id);
