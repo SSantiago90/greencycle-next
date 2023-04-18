@@ -227,8 +227,8 @@ export default function Home() {
             </article>
           </div>
         </div>
+        <PedidosList state={"pending"} />
         <Footer />
-        {/* <PedidosList state={"pending"} /> */}
       </Layout>
     </>
   );
