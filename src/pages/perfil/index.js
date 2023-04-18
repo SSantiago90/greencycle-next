@@ -16,17 +16,13 @@ export default function Perfil() {
       </Head>
       <Layout>
         <h1>Mi cuenta </h1>
-        <Link href="/perfil/terminos">
+        <Link href="/perfil/informacion">
           Informacion personal y estadisticas{" "}
         </Link>
 
         <h2>Soporte </h2>
-        <Link href="/perfil/terminos">
-          Informacion personal y estadisticas{" "}
-        </Link>
-        <Link href="/perfil/terminos">
-          Informacion personal y estadisticas{" "}
-        </Link>
+        <Link href="/perfil/terminos">Terminos y condiciones </Link>
+        <Link href="/perfil/terminos">Politicas de privacidad </Link>
       </Layout>
     </>
   );
